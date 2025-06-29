@@ -44,7 +44,7 @@ const firmSchema = new mongoose.Schema({
         }
     ],
 
-    // Relationship between products
+    // Relationship with products
     products : [{
         type : mongoose.Schema.Types.ObjectId,
         ref : 'Product'
