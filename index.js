@@ -12,7 +12,7 @@ const path = require('path')
 
 const app = express()
 
-const port = 8000;
+const port = process.env.port || 8000;
 
 dotEnv.config()
 app.use(cors())
@@ -42,7 +42,7 @@ app.listen(port, () => {
     console.log(`Server started and running successfully at port ${port}`)
 })
 
-app.use('/home', (req,res) => {
+app.use('/', (req,res) => {
     res.send('Welcome to EatBuddy')
 })
 
